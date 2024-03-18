@@ -1,0 +1,57 @@
+body{
+    background-color: #007AFF !important;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    background-color: #007AFF !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz_card{
+    width: 30rem;
+}
+
+.quiz_card img{
+    height: 15rem;
+    object-fit: cover;
+}
+
+.question-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: 12px;
+}
+
+.quiz-answer-card:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.bg-success, .bg-danger{
+    color: white;
+}
+
+.final-headline{
+    font-size: 30px;
+    margin-bottom: 32px;
+}
+
+.button_newGame{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}

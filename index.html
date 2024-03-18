@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+    <title>QuizApp</title>
+</head>
+
+<body onload="init()">
+    
+    <!-- As a heading -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">QuizApp</span>
+        </div>
+    </nav>
+
+    <!--Card in body-->
+    <div class="container">
+        <div class="card quiz_card">
+            <img src="img/background_image.png" id="header-image" class="card-img-top">
+
+            <!--add Progress Bar-->
+            <div class="progress">
+                <div class="progress-bar" id="progress_bar" role="progressbar" style="width: 0%;"></div>
+            </div>
+
+            <!--Container Quiz end-->
+            <div class="card-body" id="endScreen" style="display: none;">
+                <div class="text-center">
+                    <h2 class="final-headline">Quiz beendet!!</h2>
+                </div>
+
+                <div class="text-center">
+                    Du hast <b id="amount-of-right-questions"></b> Fragen von <b id="amount-of-questions"></b> richtig beantwortet.
+                </div>
+
+                <div class="button_newGame">
+                    <button onclick="restartGame()" class="btn btn-primary">Spiel neu starten</button>
+                </div>
+            </div>
+
+            <!--Question-Cotainer-->
+            <div class="card-body" id="questionBody">
+                <h5 class="card-title" id="questiontext"></h5>
+
+                <!--Answer-Container-->
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                    <div class="card-body" id="answer_1">
+                    </div>
+                </div>
+
+                <!--Answer-Container-->
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+                    <div class="card-body" id="answer_2">
+                    </div>
+                </div>
+
+                <!--Answer-Container-->
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+                    <div class="card-body" id="answer_3">
+                    </div>
+                </div>
+
+                <!--Answer-Container-->
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+                    <div class="card-body" id="answer_4">
+                    </div>
+                </div>
+
+                <!--Number_Question-Container and Button-->
+                <div class="question-footer">
+                    <span>
+                        <b id="question_number"></b> von <b id="all_questions"></b> Fragen
+                    </span>
+
+                    <button onclick="nextQuestion()" class="btn btn-primary" id="next_button" disabled>Nächste Frage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
